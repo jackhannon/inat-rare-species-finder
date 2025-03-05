@@ -7,10 +7,12 @@
 	"type": "module",
 	"main": "./scripts/app.js",
 	"scripts": {
-		"build": "tsc",
+		"build": "tsc && npm run copy-assets",
+		"copy-assets": "copyfiles ./*.html ./*.css ./dist",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"devDependencies": {
+		"copyfiles": "^2.4.1",
 		"typescript": "^5.8.2"
 	}
 }
